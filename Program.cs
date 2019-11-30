@@ -7,7 +7,8 @@ namespace advent_of_code
     {
         static void Main(string[] args)
         {
-            Days.Y2015.Day01.Run();
+            // Days.Y2015.Day01.Run();
+            Days.Y2015.Day02.Run();
         }
     }
 }
