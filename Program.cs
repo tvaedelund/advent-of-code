@@ -9,7 +9,8 @@ namespace advent_of_code
         {
             // Days.Y2015.Day01.Run();
             // Days.Y2015.Day02.Run();
-            Days.Y2015.Day03.Run();
+            // Days.Y2015.Day03.Run();
+            Days.Y2015.Day04.Run();
         }
     }
 }
