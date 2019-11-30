@@ -1,13 +1,12 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace advent_of_code.Days.Y2015
 {
     public static class Day01
     {
-        public async static void Run()
+        public static void Run()
         {
             // Initialize
             var day = "Day01";
@@ -15,7 +14,7 @@ namespace advent_of_code.Days.Y2015
             Console.WriteLine($"Y{year}.{day}");
 
             // Load resources
-            var data = await GetDataAsync(year, day);
+            var data = File.ReadAllText(@$".\Inputs\Y{year}\{day.ToLower()}.txt");
 
             // Step 1
             Debug.Assert(GetResultOne("(())") == 0);
@@ -41,11 +40,6 @@ namespace advent_of_code.Days.Y2015
             var resultTwo = GetResultTwo(data);
             Console.WriteLine($"Result 2: {resultTwo}");
             Console.WriteLine($"Done in {timerTwo.ElapsedMilliseconds} ms");
-        }
-
-        private static async Task<string> GetDataAsync(string year, string day)
-        {
-            return await File.ReadAllTextAsync(@$".\Inputs\Y{year}\{day.ToLower()}.txt");
         }
 
         private static int GetResultOne(string data)
