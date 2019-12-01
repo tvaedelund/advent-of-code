@@ -10,15 +10,14 @@ namespace advent_of_code.Days.Y2019
 {
     public static class Day01
     {
-        public static void Run()
+        public static void Run(int year, string day)
         {
             // Initialize
-            var day = "Day01";
-            var year = "2019";
+            day = $"Day{day}";
             Console.WriteLine($"Y{year}.{day}");
 
             // Load resources
-            var data = File.ReadAllText(@$".\Inputs\Y{year}\{day.ToLower()}.txt");
+            var data = ""; //File.ReadAllText(@$".\Inputs\Y{year}\{day.ToLower()}.txt");
 
             // Step 1
             Debug.Assert(GetResultOne("") == 0);

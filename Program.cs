@@ -7,11 +7,12 @@ namespace advent_of_code
     {
         static void Main(string[] args)
         {
-            // Days.Y2015.Day01.Run();
-            // Days.Y2015.Day02.Run();
-            // Days.Y2015.Day03.Run();
-            // Days.Y2015.Day04.Run();
-            Days.Y2015.Day05.Run();
+            Run(2019, "01");
+        }
+
+        static void Run(int year, string day)
+        {
+            Type.GetType($"advent_of_code.Days.Y{year}.Day{day}").GetMethod("Run").Invoke(null, new object[] { year, day });
         }
     }
 }
