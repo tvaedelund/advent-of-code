@@ -7,7 +7,7 @@ namespace advent_of_code
     {
         static void Main(string[] args)
         {
-            Run(2019, "02");
+            Run(2019, "03");
         }
 
         static void Run(int year, string day)
